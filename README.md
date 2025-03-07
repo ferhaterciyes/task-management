@@ -67,8 +67,8 @@ npm run dev
 
 ## Canlı Demo
 
-Uygulamanın canlı demosuna [buradan](https://your-demo-url.com) ulaşabilirsiniz.
-
+Uygulamanın canlı demosuna [buradan](https://taskmanagementrakamon.netlify.app/) ulaşabilirsiniz.
+  
 ## Kullanım
 
 1. Kayıt Ol sayfasından bir hesap oluşturun (geçerli bir TC Kimlik No gereklidir)
@@ -82,6 +82,14 @@ Uygulamanın canlı demosuna [buradan](https://your-demo-url.com) ulaşabilirsin
 
 Admin kullanıcısı oluşturmak için Firebase Firestore veritabanındaki kullanıcılar koleksiyonundan ilgili kullanıcının "role" alanını "admin" olarak güncelleyin.
 
+### Test İçin Admin Kullanıcısı
+
+Firebase koleksiyonunu açıp kurulum yapmak istemiyorsanız, aşağıdaki admin kullanıcı bilgilerini kullanarak uygulamayı test edebilirsiniz:
+
+- **Email**: `feerciyes123@gmail.com`
+- **Password**: `123123`
+
+TC Kimlik numarasını test etmek için WhatsApp üzerinden iletişime geçebilirsiniz.
 ## Lisans
 
 MIT
