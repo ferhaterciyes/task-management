@@ -68,7 +68,12 @@ npm run dev
 ## Canlı Demo
 
 Uygulamanın canlı demosuna [buradan](https://taskmanagementrakamon.netlify.app/) ulaşabilirsiniz.
+  ## Collaborators
   
+  The following collaborators have been added to the project:
+  
+  - **Serenay Çiftçiler**: `serenayciftciler@rakamon.com.tr`
+  - **Hande Lika**: `handelika@rakamon.com.tr`
 ## Kullanım
 
 1. Kayıt Ol sayfasından bir hesap oluşturun (geçerli bir TC Kimlik No gereklidir)
