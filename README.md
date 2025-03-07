@@ -44,7 +44,7 @@ Bu uygulama, ekip içinde görevlerin takip edilmesini sağlayan basit bir göre
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/ferhaterciyes/task-management.git
 cd task-manager
 ```
 
