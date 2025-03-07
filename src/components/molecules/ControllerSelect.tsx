@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
 import { Control, FieldValues, useController, RegisterOptions } from 'react-hook-form';
 import Label from "../atom/Label";
-
+import { FC } from 'react';
 interface Option {
     value: string;
     label: string;

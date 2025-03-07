@@ -1,5 +1,4 @@
-import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
-import {v4 as uuidv4} from "uuid";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import {Task, TaskState} from "./types";
 import {collection, addDoc, deleteDoc, doc, updateDoc, getDocs, query, where} from "firebase/firestore";
 import {db} from "../firebase/firebaseConfig";
@@ -62,7 +61,7 @@ export const toggleTaskStatus = createAsyncThunk(
     async (taskId: string, {getState}: any) => {
         const state = getState();
         const task = state.tasks.tasks.find((t: Task) => t.id === taskId);
-        
+
         if (!task) throw new Error('Task not found');
 
         const statusMap = {
@@ -73,7 +72,7 @@ export const toggleTaskStatus = createAsyncThunk(
 
         const newStatus = statusMap[task.status as keyof typeof statusMap];
         const taskRef = doc(db, "tasks", taskId);
-        
+
         await updateDoc(taskRef, {
             status: newStatus,
             updatedAt: new Date().toISOString()
