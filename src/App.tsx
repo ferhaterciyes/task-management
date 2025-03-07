@@ -1,5 +1,5 @@
 import AppRouter from "./router";
-import Navbar from "./components/organisms/Navbar.tsx";
+import Navbar from "./Navbar.tsx";
 
 const App = () => {
   return (

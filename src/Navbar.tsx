@@ -1,8 +1,8 @@
 import { useState } from 'react';
       import { Link, useNavigate } from 'react-router-dom';
-      import useAuth from '../../hooks/useAuth.ts';
+      import useAuth from './hooks/useAuth.ts';
       import { FiMenu, FiX, FiUser, FiLogOut, FiPlusCircle } from 'react-icons/fi';
-      import Button from '../atom/Button.tsx';
+      import Button from './components/atom/Button.tsx';
 
       const Navbar = () => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);

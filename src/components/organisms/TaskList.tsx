@@ -1,7 +1,7 @@
 import { FaTrash, FaCheck } from "react-icons/fa";
 import { format } from "date-fns";
 import { tr } from "date-fns/locale";
-import Loading from "../molecules/Loading.tsx";
+import Loading from "../../Loading.tsx";
 import useAuth from "../../hooks/useAuth";
 import {
     useGetTasksQuery,

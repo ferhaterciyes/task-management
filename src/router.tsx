@@ -5,7 +5,7 @@ import Register from "./components/pages/registerForm/Register.tsx";
 import Admin from "./components/pages/Admin";
 import DashboardLayout from "./components/templates/DashboardLayout";
 import useAuth from "./hooks/useAuth";
-import Loading from "./components/molecules/Loading.tsx";
+import Loading from "./Loading.tsx";
 
 const Router = () => {
     const { user, loading } = useAuth();
