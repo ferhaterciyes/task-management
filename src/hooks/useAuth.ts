@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { auth, db } from "../firebase/firebaseConfig";
 import { onAuthStateChanged, signOut, User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { useDispatch } from "react-redux";
-import { clearTasks } from "../store/taskSlice";
 
 interface AuthUser extends User {
     displayName: string | null;
@@ -14,7 +12,6 @@ const useAuth = () => {
     const [user, setUser] = useState<AuthUser | null>(null);
     const [role, setRole] = useState<"user" | "admin">("user");
     const [loading, setLoading] = useState(true);
-    const dispatch = useDispatch();
 
     useEffect(() => {
         let isMounted = true;
@@ -51,14 +48,12 @@ const useAuth = () => {
                     if (!isMounted) return;
                     setUser(null);
                     setRole("user");
-                    dispatch(clearTasks());
                 }
             } catch (error) {
                 console.error("Auth state change error:", error);
                 if (!isMounted) return;
                 setUser(null);
                 setRole("user");
-                dispatch(clearTasks());
             } finally {
                 if (isMounted) {
                     setLoading(false);
@@ -70,14 +65,13 @@ const useAuth = () => {
             isMounted = false;
             unsubscribe();
         };
-    }, [dispatch]);
+    }, []);
 
     const logout = async () => {
         try {
             await signOut(auth);
             setUser(null);
             setRole("user");
-            dispatch(clearTasks());
         } catch (error) {
             console.error("Logout error:", error);
             throw error;
